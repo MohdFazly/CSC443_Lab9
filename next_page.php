@@ -3,10 +3,14 @@ session_start();
 echo "<html>";
 
 
-$sid = session_id();
-echo "Session ID returned by session_id(): ".$sid. "<br>";
-$sid = SID;
-echo "Session ID returned by SID: ".$sid. "<br>";
+$queryString = $_SERVER["QUERY STRING"];
+echo "Query string of the incoming URL: ".$queryString ."\n";
+
+echo "Cookies received: \n";
+foreach ($_COOKIE as $name => $value)
+{ 
+    echo " $name = $value \n";
+}
 
 
 $myLogin = $_SESSION["myLogin"];
