@@ -3,7 +3,7 @@ session_start();
 echo "<html>";
 
 
-$queryString = $_SERVER["QUERY STRING"];
+$queryString = $_SERVER["QUERY_STRING"];
 echo "Query string of the incoming URL: ".$queryString ."\n";
 
 echo "Cookies received: \n";
